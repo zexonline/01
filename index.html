@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NUMBER ZONE - Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.1/lib/browser/math.min.js"></script>
+</head>
+<body>
+  <div class="calculator">
+    <h2>NUMBER ZONE</h2>
+    <input type="text" id="display" disabled placeholder="0" />
+    <div class="buttons">
+      <button onclick="clearDisplay()">AC</button>
+      <button onclick="delChar()">DEL</button>
+      <button onclick="append('(')">(</button>
+      <button onclick="append(')')">)</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('/')">÷</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('*')">×</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('-')">−</button>
+
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+      <button onclick="append('+')">+</button>
+
+      <button onclick="appendFunction('sin')">sin</button>
+      <button onclick="appendFunction('cos')">cos</button>
+      <button onclick="appendFunction('tan')">tan</button>
+      <button onclick="appendFunction('sqrt')">√</button>
+
+      <button onclick="appendFunction('log10')">log</button>
+      <button onclick="appendFunction('log')">ln</button>
+      <button onclick="append('^')">^</button>
+      <button onclick="append('pi')">π</button>
+
+      <button onclick="append('e')">e</button>
+      <button onclick="useAns()">ANS</button>
+    </div>
+    <footer>@ajay_yzx</footer>
+  </div>
+
+  <audio id="buttonSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_a6ba19ddee.mp3?filename=click-124467.mp3"></audio>
+  <audio id="answerSound" src="https://cdn.pixabay.com/download/audio/2022/03/23/audio_372d2f5214.mp3?filename=success-1-6297.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
